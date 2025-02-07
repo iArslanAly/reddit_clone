@@ -1,5 +1,7 @@
 # Reddit Clone
 
+![Reddit Clone](assets/reddit_clone.png)
+
 ## Description
 
 This project is a clone of the popular social media platform Reddit, built using Flutter. It allows users to create posts, comment on them, and vote on posts and comments.
@@ -66,6 +68,10 @@ For any questions or feedback, please contact:
 
 - Name: Arslan Ali
 
-- Email: iarslanaly@yahoo.com
+- Email: <iarslanaly@yahoo.com>
 
 - GitHub: [iarslanaly](https://github.com/iarslanaly)
+
+```markdown
+
+Make sure to place the image `reddit_clone.png` inside the `assets` directory in your project.
