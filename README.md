@@ -1,6 +1,6 @@
 # Reddit Clone
 
-![Reddit Clone](assets/reddit_clone.png)
+![Reddit Icon](https://www.redditinc.com/assets/images/site/reddit-logo.png)
 
 ## Description
 
