@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:redit_clone/core/common/loadeer.dart';
 
 import 'package:redit_clone/core/common/sign_in_button.dart';
+import 'package:redit_clone/views/auth/controller/auth_controller.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends ConsumerWidget {
   const LoginScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isLoading = ref.watch(authControllerProvider);
     return Scaffold(
       appBar: AppBar(
         title: Icon(
@@ -29,7 +33,7 @@ class LoginScreen extends StatelessWidget {
             size: 400,
             color: Color.fromARGB(255, 207, 94, 7),
           ),
-          SignInButton(),
+          isLoading ? Loader() : SignInButton(),
         ],
       ),
     );

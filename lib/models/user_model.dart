@@ -60,14 +60,14 @@ class UserModel {
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
-      uid: map['uid'] as String,
-      email: map['email'] as String,
-      name: map['name'] as String,
-      photoUrl: map['photoUrl'] as String,
-      banner: map['banner'] as String,
+      uid: map['uid'] ?? '',
+      email: map['email'] ?? '',
+      name: map['name'] ?? '',
+      photoUrl: map['photoUrl'] ?? '',
+      banner: map['banner'] ?? '',
       isAuthenticated: map['isAuthenticated'] as bool,
       karma: map['karma'] as int,
-      awards: List<String>.from((map['awards'] as List<String>)),
+      awards: List<String>.from((map['awards'] ?? [])),
     );
   }
 
