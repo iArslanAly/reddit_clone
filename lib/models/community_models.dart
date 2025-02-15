@@ -54,13 +54,19 @@ class CommunityModels {
 
   factory CommunityModels.fromMap(Map<String, dynamic> map) {
     return CommunityModels(
-      id: map['id'] as String,
-      createdAt: map['createdAt'] as String,
-      name: map['name'] as String,
-      banner: map['banner'] as String,
-      avatar: map['avatar'] as String,
-      members: List<String>.from(map['members'] as List),
-      mods: List<String>.from(map['mods'] as List),
+      id: map['id']?.toString() ?? '', // Prevents null crash
+      name: map['name']?.toString() ?? 'Unknown',
+      banner: map['banner']?.toString() ?? '', // Ensures it's always a String
+      avatar: map['avatar']?.toString() ?? '', // Ensures it's always a String
+      createdAt:
+          map['createdAt']?.toString() ?? '', // Ensures it's always a String
+      members: (map['members'] as List<dynamic>?)
+              ?.map((e) => e.toString())
+              .toList() ??
+          [], // Prevents null crash
+      mods:
+          (map['mods'] as List<dynamic>?)?.map((e) => e.toString()).toList() ??
+              [], // Prevents null crash
     );
   }
 
