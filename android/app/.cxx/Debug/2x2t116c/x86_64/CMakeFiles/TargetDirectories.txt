@@ -1,0 +1,2 @@
+/Users/iarslanaly/Desktop/Development/reddit_clone/android/app/.cxx/Debug/2x2t116c/x86_64/CMakeFiles/edit_cache.dir
+/Users/iarslanaly/Desktop/Development/reddit_clone/android/app/.cxx/Debug/2x2t116c/x86_64/CMakeFiles/rebuild_cache.dir
