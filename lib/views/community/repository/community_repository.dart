@@ -50,14 +50,18 @@ class CommunityRepository {
       List<CommunityModels> communities = [];
       for (var doc in event.docs) {
         var data = doc.data();
-        print("Firestore Data: $data"); // 🔍 Debug log before parsing
+        if (kDebugMode) {
+          print("Firestore Data: $data");
+        } // 🔍 Debug log before parsing
 
         communities.add(CommunityModels.fromMap(data as Map<String, dynamic>));
       }
 
       return communities;
     } catch (e) {
-      print("Error fetching communities: $e"); // 🛑 Catch and log errors
+      if (kDebugMode) {
+        print("Error fetching communities: $e");
+      } // 🛑 Catch and log errors
       return [];
     }
   }
